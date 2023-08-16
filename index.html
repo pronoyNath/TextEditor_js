@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,600&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: black;
+        }
+        .font-bricolage {
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+        .selected{
+            background-color: violet;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header></header>
+    <main class="lg:w-3/4 border-2 mx-auto lg:p-5 mt-10 shadow-2xl bg-sky-300">
+        <h3 class="text-center font-bold text-3xl font-bricolage mb-4">My Text Editor</h3>
+        <div class="grid grid-cols-3 border-2 border-sky-800 p-2">
+            <div class="pl-5">
+                <i class="fa-solid fa-bold mr-4" id="bold"></i>
+                <i class="fa-solid fa-italic mr-4" id="italic"></i>
+                <i class="fa-solid fa-underline mr-4" id="underline"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-align-left mr-4" id="left-align"></i>
+                <i class="fa-solid fa-align-center mr-4" id="center-align"></i>
+                <i class="fa-solid fa-align-right mr-4" id="right-align"></i>
+                <i class="fa-solid fa-align-justify" id="justify"></i>
+            </div>
+            <div class="inline-flex items-center lg:justify-end">
+                <input type="number" id="number-box" class="border-2 pl-1 w-1/2 mr-5 rounded-lg"
+                    placeholder="font-size">
+                <input type="color" id="colorBox" value="#BB66CC">
+                <!-- <p id="textColor">Hello world</p> -->
+            </div>
+        </div>
+        <section>
+            <textarea id="text-field" class="border-2 w-full h-96 font-bricolage border-sky-800 p-4" placeholder="Write your feelings...."></textarea>
+        </section>
+    </main>
+
+    
+    <script src="js/check.js"></script>
+</body>
+
+</html>
